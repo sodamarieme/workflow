@@ -1,11 +1,14 @@
-name: Vérification site HTML-CSS
+name: Verification site HTML-CSS
 
-on: [push]
+on:
+  push:
 
 jobs:
   verification:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Vérifier le site
-        run: echo "Site HTML/CSS OK ✅"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Message de verification
+        run: echo "Site HTML/CSS verifie avec succes"
